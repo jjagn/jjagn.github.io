@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE htmlng>
 <html>
     <head>
         <meta charset="utf-8">
@@ -29,16 +29,21 @@
               </div>
 
               <div class="menu-item">
-                <a href="/misc">Misc</a>
-              </div>
-              <div class="menu-item">
                 <a href="/#contact">Contact</a>
               </div>
             </div>
           </div>
 
           <div class="main">
-              <p> Lorem Ipsum project description </p>
+            <p>During my time at Genesmith, my main role was the design and manufacturing of an updated version of their in-paddock machine learning livestock identification system.</p>
+            <img class="image" src="/images/genesmith-under-construction.jpg" alt="under construction" title="under construction">
+            <p>I designed the frames and manufactured the electrical/control systems in NZ, before flying over to a farm in central VIC to manufacture the first two units.</p>
+            <img class="image" src="/images/genesmith-debugging.jpg" alt="under construction" title="under construction">
+            <p>The work I'd put in setting up automated deployment and installs of our software to the remote computers came in handy allowing me to leave the control boxes updating while I put the physical units together in the chassis, but it was still a very long two weeks, with some pretty late nights.</p>
+            <img class="image" src="/images/genesmith-ricky-luhrs.jpg" alt="at sunset" title="at sunset">
+            <p>The first two units went together with some minor issues that had to be fixed on the fly (not much in the way of replacement computer hardware available 7 hours drive north of Melbourne).</p>
+            <img class="image" src="/images/genesmith-front-view.jpg" alt="all finished" title="all finished">
+            <p>These units completed several field tests and provided invaluable data that allowed me to increase detection accuracy by 100x, rates by up to 9x, and detection distance by 2x. They remained in the paddock happily phoning home until I arrived at the farm we had left them 6 months later to move them and continue testing.</p>
             <div class="clearfix"></div>
 
           </div>
@@ -57,3 +62,23 @@
 
     </body>
 </html>
+
+<style>
+    .main {
+        max-width: 800px; /* Adjust as needed */
+        margin: 0 auto; /* Center the content */
+    }
+    
+    .image {
+        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        height: auto; /* Maintain aspect ratio */
+        float: left; /* Or 'right', depending on your layout preference */
+        margin: 0 15px 15px 0; /* Add some spacing around the image */
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>

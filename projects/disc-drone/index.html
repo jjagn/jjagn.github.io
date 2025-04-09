@@ -29,16 +29,17 @@
               </div>
 
               <div class="menu-item">
-                <a href="/misc">Misc</a>
-              </div>
-              <div class="menu-item">
                 <a href="/#contact">Contact</a>
               </div>
             </div>
           </div>
 
           <div class="main">
-              <p> Lorem Ipsum project description </p>
+            <img class="image" src="/images/disc_drone.png" alt="disc drone" title="disc drone">
+            <p>This project is pretty simple. I'd like to build a drone that flies like a disc golf disc, that I can control, and I'd like to throw a hole in one with it. This is inspired by <a href="https://www.youtube.com/watch?v=7JH1_ZKV7t4">this</a> video. I'd like to make a spinning drone that's "hidden" (probably not very well) under a disc golf disc, that flies like a disc when you throw it. The major hurdle is that a disc golf disc actually spins quite fast, fast enough, critically, that no gyroscope I could find could keep up. <a href="https://shop.techdisc.com">This</a> company, which offers a disc that will measure the speed, RPM, angle, etc. of your throw, has something figured out, and I think I know what they're doing. I emailed the CEO, and while he was understandably coy about sharing their IP (but was a super nice guy!), he essentially confirmed my suspicions.</p>
+            <p>While gyroscopes will saturate well before being able to accurately measure the speed of a spinning disc, accelerometers are readily available that can measure tens of thousands of g's. By mounting an accelerometer a known distance from the centre of mass of the disc (which it will rotate about when thrown), you should be able to easily calculate the rotational velocity of the disc from the centripetal acceleration measured by the accelerometer. However, this would have to be calibrated and positioned quite accurately, which is why I think TechDisc sells the whole disc with the puck attached from the factory, rather than letting you put it on your own disc.</p>
+            <p>For now, I think as a proof of concept I'm just going to attempt to build a drone that spins alot slower, as given that it (hopefully anyway) will be able to fly under it's own power, it doesn't need to spin as fast as a a regular disc.</p>
+              <p>WIP</p>
             <div class="clearfix"></div>
 
           </div>
@@ -57,3 +58,23 @@
 
     </body>
 </html>
+
+<style>
+    .main {
+        max-width: 800px; /* Adjust as needed */
+        margin: 0 auto; /* Center the content */
+    }
+    
+    .image {
+        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        height: auto; /* Maintain aspect ratio */
+        float: left; /* Or 'right', depending on your layout preference */
+        margin: 0 15px 15px 0; /* Add some spacing around the image */
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>

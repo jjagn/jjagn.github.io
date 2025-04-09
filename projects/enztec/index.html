@@ -29,16 +29,15 @@
               </div>
 
               <div class="menu-item">
-                <a href="/misc">Misc</a>
-              </div>
-              <div class="menu-item">
                 <a href="/#contact">Contact</a>
               </div>
             </div>
           </div>
 
           <div class="main">
-              <p> Lorem Ipsum project description <a href="https://www.linkedin.com/posts/enztec_aaos2024-orthopedicinstruments-design-activity-7163326623411367937-lSei?utm_source=share&utm_medium=member_desktop">here</a></p>
+            <img class="image" src="/images/aaos.jpeg" alt="Jackson Crawford's profile picture" title="profile picture">
+              <p> This project involved making an animatronic version of one of Enztec's medical instruments for display at a trade show in the U.S. This came across my desk on a pretty tight timeline and involved electrical and mechanical design. Working within the context of a display device for a trade show brought with it an interesting set of requirements. Firstly, the emphasis on looking professional made getting power and motion to the upper portion of the instrument a challenge, as there were to be no visible wires between the instrument and the base. This involved fabricating a custom battery pack to fit in the handle, and using a tiny microcontroller to power the servo that moved the device's handle. The two halves of the display would also have to communicate to create realistic motion, and I didn't like the idea of having to guide someone in the U.S. through troubleshooting a wifi or bluetooth connection in a conference hall full of wireless signals while I was stuck back in N.Z. To get around this, a magnet in the 'cup' on the front is detected by a hall sensor in the body of the instrument when it moves close, and this allows the two halves of the display to sync their motion.
+              See it in action <a href="https://www.linkedin.com/posts/enztec_aaos2024-orthopedicinstruments-design-activity-7163326623411367937-lSei?utm_source=share&utm_medium=member_desktop">here</a>.</p>
             <div class="clearfix"></div>
 
           </div>
@@ -57,3 +56,23 @@
 
     </body>
 </html>
+
+<style>
+    .main {
+        max-width: 800px; /* Adjust as needed */
+        margin: 0 auto; /* Center the content */
+    }
+    
+    .image {
+        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        height: auto; /* Maintain aspect ratio */
+        float: left; /* Or 'right', depending on your layout preference */
+        margin: 0 15px 15px 0; /* Add some spacing around the image */
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>

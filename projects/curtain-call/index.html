@@ -29,17 +29,23 @@
               </div>
 
               <div class="menu-item">
-                <a href="/misc">Misc</a>
-              </div>
-              <div class="menu-item">
                 <a href="/#contact">Contact</a>
               </div>
             </div>
           </div>
 
           <div class="main">
-              <p> Lorem Ipsum project description </p>
-            <div class="clearfix"></div>
+            <p>This is one of my longest running projects. In 2021, I was living in a very affordable student flat, and my flatmates and I were going away over the uni break. We'd recently been informed by a neighbour that someone had been looking around our flat in a shifty manner, likely trying to break in. Worried about our possessions, and instead of any other, probably better idea, I had a thought. What if I could make my curtains open and close automatically, so it always looks like someone is home? What if I could lie in bed, and be woken up by sunlight, rather than an obnoxious alarm, but not have to leave my curtains open all night and likely freeze to death? Thus, curtain call was born.</p>
+            <p>A short time after this brainwave, after I had started doing some concept sketches, I stumbled across a competition being run by Arduino (a popular manufacturer of excellent hobbyist microcontrollers) for smart home projects, where they would send out one of these new boards to someone with a convincing pitch for a cool project using one of the boards. I submitted my proposal, got accepted, and waited eagerly for my board, only to find out that it had been lost in the mail. Then I moved flats. And then I moved flats again. Luckily none of our stuff got stolen in the interim</p>
+            <p>A short time after my most recent move, I set up a home assistant server and automated our flat's garage door so we could all open it from our phones, as we only had two remotes. Yes, I could have just bought a new remote, but that would have taken far less time and probably have ended up cheaper. With this feather in my cap, I was reminded of my curtains again, and got to work.</p>
+            <img class="image" src="/images/concept1.jpeg" alt="in action" title="electronics">
+            <img class="image" src="/images/concept2.jpeg" alt="in action" title="electronics">
+            <p>From these initial concepts, an extremely loud prototype was produced, which was technically functional, but was swiftly vetoed by my long suffering now-fiance, for reasons such as "it's an eyesore" and "that looks like it's going to burn the house down". With this invaluable customer feedback, I upgraded the design to some silent stepper drivers, soldered together a proper circuit, 3D printed an enclosure, and my curtains were happily automated for the next several months.</p>
+            <p>Then, upon returning from a trip home to see family, I discovered to my dismay that the curtain controller was not responding. A quick inspection of the circuit board revealed that what I can only assume to be some random cosmic particle fried the microcontroller in my absence (not burning my flat down in the process, to my relief, and what would be the relief of my landlord if he knew about it). This neccessitated version 3</p>
+            <img class="image" src="/images/curtain-call-pcb.png" alt="PCB Design" title="PCB">
+            <img class="image" src="/images/curtain-call-real-life.jpg" alt="in action" title="electronics">
+            <p>Upgraded with a custom PCB, configurable microstepping switches, a completely hidden power supply, machined steel mounting bracket, and changing from drawing the curtains apart in the middle to drawing one large curtain all the way across so there is never an annoying crack between the curtains, this version has now clocked almost 1000 cycles with no issues. While this isn't the most technically impressive project, I'm proud of myself for finishing it, and I'll admit that every time I walk into my room to find the curtains have already been closed for me, I still find myself smiling.</p>
+                        <div class="clearfix"></div>
 
           </div>
 
@@ -57,3 +63,23 @@
 
     </body>
 </html>
+
+<style>
+    .main {
+        max-width: 800px; /* Adjust as needed */
+        margin: 0 auto; /* Center the content */
+    }
+    
+    .image {
+        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        height: auto; /* Maintain aspect ratio */
+        float: left; /* Or 'right', depending on your layout preference */
+        margin: 0 15px 15px 0; /* Add some spacing around the image */
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>

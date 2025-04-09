@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Jackson Crawford - About me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!-- <link rel="alternate" type="application/atom+xml" href="https://thorstenball.com/atom.xml"> -->
+
+        <link rel="stylesheet" href="/css/syntax.css">
+        <link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+      <div class="wrapper">
+        <div class="columns">
+          <div class="sidebar">
+            <header>Jackson Crawford</header>
+            <div class="menu">
+              <div class="menu-item">
+                <a href="/">About</a>
+              </div>
+              <div class="menu-item active">
+                <a href="/projects">Projects</a>
+              </div>
+              <div class="menu-item">
+                <a href="/cv">CV</a>
+              </div>
+
+              <div class="menu-item">
+                <a href="/#contact">Contact</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="main">
+              <p>If you're not familiar with rogaining, I think it's more commonly known as orienteering, but there might be slight differences between the two. For me, it means getting the map you see below, figuring out with some mates what the 'optimal' path would be to get as many controls as possible inside the allotted time, and then stumbling around the port hills in the dark for two hours before inevitably getting beaten by most of the other teams.</p>
+              <p>What really rubs is that our team usually has clocked more kilometers than alot of the teams that beat us, which means, in theory, that we're leaving a lot of points on the table. I like running as much as the next guy, but if I'm going to have to run, at the very least I want to be running efficiently. </p>
+              <p>In the absence of any real navigational prowess, the easiest option I could come up with was to get a computer to figure out the best path for me. I've already proved through years of trial and error at this point that my internal algorithm is not optimal, otherwise I'd obviously be winning more rogaines. As previously mentioned, I'm a servicable runner, probably more through being young than anything else, but there's some real sickos out there, and I'm never going to be able to run faster than them or for longer. But how well could I do if I could calculate the most optimal, most efficient path?</p>
+            <img class="image" src="/images/coolest.gif" alt="Jackson Crawford's profile picture" title="profile picture">
+            <p>The program starts by importing a picture of the map of the rogaine. I then 'localise' this to easting and northing coordinates by marking some datums on the map (for example, a distinctive intersection or elevation point). The datum points are then used to get the map image's scale in meters per pixel. I can then mark all the controls on the map, and by comparing these locations to some LIDAR data for the port hills, get an accurate elevation for each of the controls.</p>
+            <p>Armed with this info, it's trivial to cycle through all the controls, and construct a graph containing, for each control, a distance to every other control, which is a prerequisite for most popular shortest-path algorithms. But it isn't quite that simple, as I don't want to find the shortest path - I want to find the most efficient path, and here is the bulk of the actual work, I think - figuring out how to describe to a computer what the most optimal path actually is</p>
+           <p>Here's an obviously sub-optimal path, where the algorithm has skipped straight to a far and very high altitude control, which (I think) is partially due to the heuristic for picking the next control not being implemented properly, and partially due to the map localisation not quite lining up right, causing some elevations to be wrong. Back to work!</p>
+            <img class="image" src="/images/well-optimised-path.jpeg" alt="Jackson Crawford's profile picture" title="profile picture">
+            <div class="clearfix"></div>
+
+          </div>
+
+        </div>
+
+        <footer class="footer">
+    <p>
+    Website template used with permission from <a href="//thorstenball.com">Thorsten Ball</a>
+    <p>
+    </p>
+    <p>
+    Copyright © 2025 Thorsten Ball. All rights reserved.
+    </p>
+</footer>
+
+    </body>
+</html>
+
+<style>
+    .main {
+        max-width: 800px; /* Adjust as needed */
+        margin: 0 auto; /* Center the content */
+    }
+    
+    .image {
+        max-width: 100%; /* Ensure the image doesn't exceed its container */
+        height: auto; /* Maintain aspect ratio */
+        float: right; /* Or 'right', depending on your layout preference */
+        margin: 15px 15px 15px 15px; /* Add some spacing around the image */
+    }
+    
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
